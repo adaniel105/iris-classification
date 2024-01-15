@@ -4,6 +4,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/ping")
+@app.get("")
 def pong():
-    return {"ping": "pong"}
+    return {"status": "working"}
