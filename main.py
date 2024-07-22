@@ -4,6 +4,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("")
-def pong():
+@app.get("/")
+async def hello():
     return {"status": "working"}
