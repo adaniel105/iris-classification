@@ -16,12 +16,12 @@ with open("model.pkl", "rb") as f:
 
 
 @app.get("/", response_class=HTMLResponse)
-async def index(request: Request, prediction_str: str = " "):
+def index(request: Request, prediction_str: str = " "):
     return templates.TemplateResponse("index.html", {"request": request, "name": "Hello world!", "prediction_str": prediction_str})
 
 
 @app.post("/predict")
-async def predict(request: Request, sepal_length: float = Form(...), sepal_width: float = Form(...), petal_length: float = Form(...), petal_width: float = Form(...)):
+def predict(request: Request, sepal_length: float = Form(...), sepal_width: float = Form(...), petal_length: float = Form(...), petal_width: float = Form(...)):
     input_features = np.array(
         [[sepal_length, sepal_width, petal_length, petal_width]])
     preds = model.predict(input_features)
@@ -33,4 +33,4 @@ async def predict(request: Request, sepal_length: float = Form(...), sepal_width
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8080)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
