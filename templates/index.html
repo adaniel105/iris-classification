@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastAPI Model deployment</title>
+</head>
+<body>
+    <div>
+      <form action="{{ url_for('predict') }}" method="post">
+        <input type="text" name="sepal_length" placeholder="Sepal length">
+        <input type="text" name="sepal_width" placeholder="Sepal width">
+        <input type="text" name="petal_length" placeholder="Petal Length">
+        <input type="text" name="petal_width" placeholder="Petal Width">
+        <button type="submit">Predict</button>
+      </form>
+      <br>
+      <br>
+
+      {% if prediction_str %}
+      Predicted species : {{ predicted_species }}
+      {% endif %}
+    </div>
+  </body>
+</html>
