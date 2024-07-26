@@ -1,14 +1,18 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 import numpy as np
 import pickle
 
+static_folder = Path(__file__).parent.resolve(strict=True) / "static"
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory=str(static_folder)), name="static")
 
-template_folder = Path(__file__).parent / "templates"
+
+template_folder = Path(__file__).parent.resolve(strict=True) / "templates"
 templates = Jinja2Templates(directory=str(template_folder))
 
 with open("model.pkl", "rb") as f:
