@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
 </head>
 <body>
-    <div>
+    <div class="form-wrapper">
       <form action="{{ url_for('predict') }}" method="post">
         <input type="text" name="sepal_length" placeholder="Sepal length">
         <input type="text" name="sepal_width" placeholder="Sepal width">
@@ -19,7 +19,7 @@
       <br>
 
       {% if prediction_str %}
-      Predicted species : {{ prediction_str }}
+      Predicted species : {{ prediction_str }}!
       {% endif %}
     </div>
   </body>

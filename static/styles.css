@@ -1,5 +1,48 @@
+:root{
+  --color-primary : #ccc;
+  --color-secondary: black;
+  --padding-large: 2em;
+  --padding-small: 0.5em;
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-wrapper{
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  padding: var(--padding-large);
+}
+
 form{
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+input[type="text"]{
+  border: none;
+  border-radius: 5px;
+  padding: var(--padding-small);
+}
+
+button{
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: var(--padding-small);
+}
+
+input:focus,
+button:focus{
+  outline: none;
 }
