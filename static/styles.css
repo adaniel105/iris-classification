@@ -3,20 +3,28 @@
   --color-secondary: black;
   --padding-large: 2em;
   --padding-small: 0.5em;
+
 }
 
-body, html{
+body,html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: medium;
   display : flex;
   justify-content: center;
   align-items: center;
+  min-width: 100vw;
   min-height: 100vh;
+  background-image: url(/static/images/iris-bg.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
+
 .form-wrapper{
-  border: 1px solid var(--color-primary);
+  border: none;
   background-color: var(--color-primary);
   border-radius: 5px;
   padding: var(--padding-large);
