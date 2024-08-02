@@ -1,4 +1,4 @@
-### Iris-Classification
+## Iris Classification
 
 Classification of species of the Iris flower using SVM trained to an accuracy of 97%. 
 
