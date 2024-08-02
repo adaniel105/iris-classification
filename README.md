@@ -8,5 +8,7 @@ Web Application implemented with FastAPI, HTML and CSS using JInja2.
 
 Commands to run:
 ```git clone https://github.com/adaniel105/iris-classification.git```
+
 ``` cd iris-classification```
+
 ```python3 main.py```
