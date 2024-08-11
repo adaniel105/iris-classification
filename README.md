@@ -1,6 +1,6 @@
 ## Iris Classification
 
-Classification of species of the Iris flower using the SVM model trained to an accuracy of 97%.
+Classification of species of the Iris flower using a Logistic Regression model trained to an accuracy of 97%.
 
 Link to notebook used for Exploratory Data Analysis: https://www.kaggle.com/code/dani45786/iris-classification 
 
