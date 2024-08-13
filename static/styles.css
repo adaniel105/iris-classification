@@ -55,4 +55,28 @@ button:focus{
   outline: none;
 }
 
+.preview-wrapper{
+  margin: 2em;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  padding: var(--padding-large);
+}
+
+.preview-wrapper img{
+  width:100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.preview-wrapper p{
+  font-weight: 100;
+}
+
 
