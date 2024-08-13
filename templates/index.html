@@ -25,5 +25,67 @@
       Predicted species : {{ prediction_str }}
       {% endif %}
     </div>
+
+    {% if prediction_str == 'Iris Versicolor' %}
+    <div style="  margin: 2em;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    padding: var(--padding-large);">
+        <img loading="lazy" src="/static/images/versicolor.png" alt="iris-versicolor" style="width: 100%;object-position:center;object-fit: cover;">
+      <p style="font-weight: 100;">
+        A graceful, sword-leaved plant similar to the garden iris, with showy, down-curved, violet, boldly veined sepals. Several violet-blue flowers with attractively veined and yellow-based sepals are on a sturdy stalk among tall sword-like leaves that rise from a basal cluster. Flowers may be any shade of purple, but are always decorated with yellow on the falls. Grows 2-3 ft. tall.
+      </p>
+    </div>
+    {% endif %}
+
+
+    {% if prediction_str == 'Iris Setosa' %}
+    <div style="  margin: 2em;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    padding: var(--padding-large);">
+      <img loading="lazy" src="/static/images/setosa.jpeg" alt="iris-setosa" style="width:100%;object-position: center;object-fit: cover;">  
+      <p style="font-weight: 100;">
+        These are vigorous plants with strong, sword-like foliage about 2 ft. in height. The iris flowers are purple-blue, usually of a very dark shade, but occasionally pale lavender and intermediate shades. Flowers are 3-6 in. wide.
+        A member of the iris family (family Iridaceae) which consists of herbs growing from rhizomes, bulbs, or corms, with narrow basal leaves and showy clusters at the tips of long stalks. There are about 60 genera and 1,500 species, distributed in temperate and tropical regions.
+      </p>
+    </div>
+    {% endif %}
+
+
+    {% if prediction_str == 'Iris Virginica' %}
+    <div style="  margin: 2em;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    padding: var(--padding-large);">
+      <div class="preview-img">
+        <img loading="lazy" src="/static/images/virginica.jpeg" alt="iris-virginica" style="width: 100%;object-position: center;object-fit: cover;">
+      </div>
+      <p style="font-weight: 100;">
+        A southern wetland species occurring from Virginia to Florida and Texas, Iris virginica is 3 feet tall with bright green leaves that often lie on the ground or water. The Southern Blue Flag is a member of the iris family (family Iridaceae) which consists of herbs growing from rhizomes, bulbs, or corms, with narrow basal leaves and showy clusters at the tips of long stalks.
+      </p>
+    </div>
+    {% endif %}
   </body>
 </html>

@@ -15,8 +15,8 @@ body,html{
   display : flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
   min-height: 100vh;
+  min-width: 100vw;
   background-image: url(/static/images/iris-bg.jpg);
   background-position: center;
   background-size: cover;
@@ -54,3 +54,5 @@ input:focus,
 button:focus{
   outline: none;
 }
+
+
