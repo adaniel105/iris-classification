@@ -23,7 +23,7 @@ with open("model.pkl", "rb") as f:
 def index(request: Request, prediction_str: str = " "):
     return templates.TemplateResponse(
         "index.html",
-        {"request": request, "name": "Hello world!", "prediction_str": prediction_str},
+        {"request": request, "prediction_str": prediction_str},
     )
 
 
