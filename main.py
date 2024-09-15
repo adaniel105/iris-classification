@@ -30,10 +30,10 @@ def index(request: Request, prediction_str: str = " "):
 @app.post("/predict")
 def predict(
     request: Request,
-    sepal_length: float = Form(),
-    sepal_width: float = Form(),
-    petal_length: float = Form(),
-    petal_width: float = Form(),
+    sepal_length: float = Form(...),
+    sepal_width: float = Form(...),
+    petal_length: float = Form(...),
+    petal_width: float = Form(...),
 ):
     input_features = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
     preds = model.predict(input_features)
