@@ -43,9 +43,3 @@ def predict(
     return templates.TemplateResponse(
         "index.html", {"request": request, "prediction_str": predicted_species}
     )
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="127.0.0.1", port=8000)
